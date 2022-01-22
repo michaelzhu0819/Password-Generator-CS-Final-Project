@@ -2,6 +2,14 @@ Date: Friday, 21st Jan 2022
 
 Author: Michael Zhu
 
+Title: better comments
+
+Description: Added better explanation to the variables in all files, along with the explanation of program in main.py
+
+Date: Friday, 21st Jan 2022
+
+Author: Michael Zhu
+
 Title: Refining
 
 Description: Added better explanation to use PwSave.py
