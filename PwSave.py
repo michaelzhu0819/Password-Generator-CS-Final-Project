@@ -8,10 +8,10 @@ import time
 def file_save(password):
 
     # setting up required variables
-    count = 1
-    checkp_1 = 1
-    save_p = []
-    locat = []
+    count = 1  # the number that indicates the sequence of the pws
+    checkp_1 = 1  # checkpoint
+    save_p = []  # stores all the pws that needs to be saved
+    locat = []  # stores the number for saved pws
 
     time.sleep(1)
 
