@@ -3,9 +3,10 @@ import random as r
 import string
 
 # setting up nessesary variables and lists
-alphabets = list(string.ascii_letters)
-digits = list(string.digits)
-med_spe_characters = list("!@#$%^&*()")
+alphabets = list(string.ascii_letters)  # all the letters
+digits = list(string.digits)  # all the numbers
+med_spe_characters = list("!@#$%^&*()")  # common symbols
+# all symbols
 high_spe_characters = list("!@#$%^&*()_-+={[}]|\:;\"\'<,>.?/~`")
 
 
@@ -14,10 +15,10 @@ and lowercases in your key phrase in high security"""
 
 
 def randomcase(s):
-    result = ''
+    result = ''  # right now result doesn't have anything
     for c in s:
-        if c in alphabets:
-            case = r.randint(0, 1)
+        if c in alphabets:  # if c is a letter
+            case = r.randint(0, 1)  # randomly chooses between 0 and 1
             if case == 0:
                 result += c.upper()
             else:
@@ -33,14 +34,14 @@ levels"""
 
 class GenPro:
     def __init__(self, p_length, must_phrase, type_count, password):
-        self.p_length = p_length
-        self.must_phrase = must_phrase
-        self.type_count = type_count
-        self.password = password
+        self.p_length = p_length  # length of password
+        self.must_phrase = must_phrase  # key phrase
+        self.type_count = type_count  # types of characters in pw
+        self.password = password  # the list that stores the result
 
     def low_secur(self):  # low security
         for i in range(int(self.p_length) - len(self.must_phrase)):
-            typpe = r.choice(self.type_count)
+            typpe = r.choice(self.type_count)  # type of characters to add
             if typpe == "num":
                 self.password.append(r.choice(digits))
             else:
