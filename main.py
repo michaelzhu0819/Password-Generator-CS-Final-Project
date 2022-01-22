@@ -4,6 +4,14 @@
 # CS30
 # Ms.S
 
+"""This is a program that allows you to generate passwords with
+great amounts of flexibility. You have by default four security
+levels to choose from, with each one being a little different
+from one another. If you are not satisfied you can use the
+advanced generator after using the normal one once to
+customize your password even greater. After you are done
+you can either generate more, quit or save the pws to your
+computer"""
 # Importing all the modules needed
 import string
 import random as r
@@ -17,8 +25,8 @@ import PwSave
 alphabets = list(string.ascii_letters)  # letters word bank
 
 type_count = ["num", "let", "sym"]  # A few lists storing important info
-password = []
-final_pw_list = []
+password = []  # the list that is going to hold the password
+final_pw_list = []  # the list that holds every pw generated
 
 checkp_1 = 1  # Checkpoints
 checkp_2 = 1
@@ -50,6 +58,7 @@ while True:
 
     # checkpoint 1, keeps looping until an acceptable answer is inputted
     while checkp_1 == 1:
+        # asks for the key phrase in password
         must_phrase = input("type in a phrase that you would like to have " +
                             "included in the password, if this doesn't " +
                             "apply to you, press the enter key. Please " +
@@ -126,7 +135,7 @@ while True:
         print("".join(result.password) + " could be your password")
         time.sleep(0.7)
 
-        # prints out and resets the password
+        # prints out and resets the password list
         final_pw_list.append("".join(result.password))
         password.clear()
         password.append(must_phrase)
@@ -156,6 +165,7 @@ while True:
         else:
             print("invalid input!")  # handles wrong inputs
 
+    # breaks or restarts the overall loop
     if "quit" in cont_ask.lower():
         break
     elif "cont" in cont_ask.lower():
