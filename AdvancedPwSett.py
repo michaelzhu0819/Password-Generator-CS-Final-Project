@@ -58,7 +58,7 @@ def pw_manipulation(password, save):
 
     time.sleep(1.5)
     print("Please note that the first two options that will be displayed " +
-          "are manetory")
+          "are manetory, choose 1 before 2")
     time.sleep(1.5)
 
     # The loop that controls the menu
