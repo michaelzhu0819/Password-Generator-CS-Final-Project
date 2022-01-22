@@ -8,8 +8,8 @@ customize your password even greater. After you are done
 you can either generate more, quit or save the pws to your
 computer.
 
-the instructions of how to use the code is displayed when running
-the code.
+Instructions:
+Steps shown in actual codes
 
 This program has way greater adaptibility and flexibility when generating
 passcodes, it also has a save function which allows you to actually
