@@ -1,5 +1,3 @@
-
-
 import string
 import random as r
 import time
@@ -17,9 +15,10 @@ checkp_1 = 1
 checkp_2 = 1
 
 while True:
-    print("welcome to password generator. This is a place for you to develop a " +
-          "satisfactory password with great levels of customization. \ntype " +
-          "anything to start, and type quit to stop the program\n")
+    print("welcome to password generator. This is a place for you to " +
+          "develop a satisfactory password with great levels of " +
+          "customization. \ntype anything to start, and type quit to " +
+          "stop the program\n")
     touch = input()
     if touch == "quit":
         break
@@ -39,44 +38,48 @@ while True:
     time.sleep(1)
 
     while checkp_1 == 1:
-        must_phrase = input("type in a phrase that you would like to have included " +
-                            "in the password, if this doesn't apply to you, press " +
-                            "the enter key. Please make sure this phrase is not" +
-                            " included in your username for maximium sercurity\n")
+        must_phrase = input("type in a phrase that you would like to have " +
+                            "included in the password, if this doesn't " +
+                            "apply to you, press the enter key. Please " +
+                            "make sure this phrase is not included in " +
+                            "your username for maximium sercurity\n")
 
         if must_phrase == "\n":
             must_phrase = ""
             checkp_1 -= 1
         elif len(must_phrase) > p_length - 4:
-            print("the phrase is too big for the allowed length of password, " +
-                  "try again\n")
+            print("the phrase is too big for the allowed length of " +
+                  "password, try again\n")
             continue
         else:
-          checkp_1 -= 1
+            checkp_1 -= 1
 
     while checkp_2 == 1:
-        security_lvl = str(input("What is the level of security you are looking for?\n\t" +
-                            "- low: relatively easier to memorize, with enough length " +
-                            "also difficult to guess\n\t" +
-                            "- medium: need to write it down, includes different " +
-                            "characters and more randomized\n\t" +
-                            "- high: for the most secure files and accounts, your " +
-                            "must included phrase might\n\t be manipulated slightly, "+
-                            "impossible to remember, impossible to guess\n\t" +
-                            "- recommended: a password that satisfies most websi" +
-                            "tes and account registeration\n\tplatforms for your " +
-                            "convenience\n"))
+        security_lvl = str(input("What is the level of security you are " +
+                                 "looking for?\n\t- low: relatively easier " +
+                                 "to memorize, with enough length " +
+                                 "also difficult to guess\n\t" +
+                                 "- medium: need to write it down, includes " +
+                                 "different characters and more randomized" +
+                                 "\n\t- high: for the most secure files and " +
+                                 "accounts, your must included phrase might" +
+                                 "\n\t  be manipulated slightly, " +
+                                 "impossible to remember, impossible to " +
+                                 "guess\n\t- recommended: a password that " +
+                                 "satisfies most websites and account " +
+                                 "registeration\n\t  platforms for your " +
+                                 "convenience\n"))
 
         if security_lvl.lower() != "low" and security_lvl.lower() != "med" \
-        and security_lvl.lower() != "medium" and security_lvl.lower() != "high" \
-        and "recom" not in security_lvl.lower():
+           and security_lvl.lower() != "medium" and security_lvl.lower() != \
+           "high" and "recom" not in security_lvl.lower():
             if security_lvl == "quit":
                 break
             else:
-              print("value not accepted!")
-              continue
+                print("value not accepted!")
+                continue
         else:
-          checkp_2 -= 1
+            checkp_2 -= 1
 
     if security_lvl == "quit":
         break
@@ -86,10 +89,9 @@ while True:
     time.sleep(1)
 
     password.append(must_phrase)
-    
+
     for i in range(3):
-        result = PGen.GenPro(p_length, must_phrase, type_count, \
-                              password)
+        result = PGen.GenPro(p_length, must_phrase, type_count, password)
 
         if security_lvl.lower() == "low":
             result.low_secur()
@@ -113,12 +115,13 @@ while True:
 
     time.sleep(1)
 
-    checkp_2 = 1 
+    checkp_2 = 1
 
-    while True:    
-        cont_ask = input("do you want to generate more password? type quit to " +
-                        "stop the program, continue to use again or advanced to " +
-                        "access the advanced generator\n")
+    while True:
+        cont_ask = input("do you want to generate more password? type quit " +
+                         "to stop the program, continue to use again, " +
+                         "advanced to access the advanced generator, or save" +
+                         " to save the generated passwords\n")
 
         if "quit" in cont_ask.lower():
             break
@@ -132,7 +135,7 @@ while True:
             PwSave.file_save(final_pw_list)
         else:
             print("invalid input!")
-   
+
     if "quit" in cont_ask.lower():
         break
     elif "cont" in cont_ask.lower():
