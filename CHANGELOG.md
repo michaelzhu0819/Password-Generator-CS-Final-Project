@@ -2,6 +2,14 @@ Date: Friday, 22nd Jan 2022
 
 Author: Michael Zhu
 
+Title: better description
+
+Description: clearly states that option 1 is before 2 in advanced generator
+
+Date: Friday, 22nd Jan 2022
+
+Author: Michael Zhu
+
 Title: bug fix
 
 Description: Fixed a bug where in main.py the input key phrase section wouldn't run after typing continue
