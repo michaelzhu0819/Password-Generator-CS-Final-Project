@@ -75,6 +75,8 @@ while True:
         else:
             checkp_1 -= 1
 
+    checkp_1 = 1
+
     # checkpoint 2, works the same as the previous
     while checkp_2 == 1:
         security_lvl = str(input("What is the level of security you are " +
