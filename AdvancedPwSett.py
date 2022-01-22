@@ -1,11 +1,13 @@
+# Importing the modules
 import random as r
 import string
 import time
 
 # Added the character banks the password could choose from
-alphabets = list(string.ascii_letters)
-digits = list(string.digits)
-med_spe_characters = list("!@#$%^&*")
+alphabets = list(string.ascii_letters)  # all the letters
+digits = list(string.digits)  # all the numbers
+med_spe_characters = list("!@#$%^&*")  # some of the symbols
+# all the symbols
 high_spe_characters = list("!@#$%^&*()_-+={[}]|\:;\"\'<,>.?/~`")
 
 # Menu for advanced generator
@@ -14,8 +16,7 @@ menu = ["select desired character types", "set amount of desired characters",
         "generate password", "quit"]
 
 
-"""This is the funcion to randomize letters to upper or lowercase in high
-sercurity"""
+"""This is the funcion to detect types of characters in passwords"""
 
 
 def type_detection(charr):
@@ -25,7 +26,7 @@ def type_detection(charr):
         typpe = digits
     else:
         typpe = high_spe_characters
-    return typpe
+    return typpe  # the type of characters
 
 
 """The function that executes the advanced generator"""
@@ -48,7 +49,7 @@ def pw_manipulation(password, save):
 
     aska = input("what is your key phrase? if none press enter. " +
                  "Please ensure this phrase does not\nexist in your " +
-                 "username\n")
+                 "username\n")  # gets the key phrase
 
     # If none were inputted key phrase doens't exist
     if aska == "\n":
@@ -63,12 +64,15 @@ def pw_manipulation(password, save):
     # The loop that controls the menu
     while True:
         print("You can:\n")
-        count = 1
+        count = 1  # number before menu option
         for i in menu:  # The previously mentioned menu
             print(str(count) + ". " + i)
             count += 1
             print("\t")
+
         time.sleep(2)
+
+        # accepts input to choose options from menu
         menu_ask = input("Type 1 for the 1st option, 2 for the 2nd option, " +
                          "and so on, type quit to end the program\n")
 
@@ -85,6 +89,7 @@ def pw_manipulation(password, save):
         elif menu_ask == "2":
             # If number in selection
             if "number" in type_ask.lower():
+                # get the length of numbers
                 num_leng_ask = int(input("how many numbers do you want in " +
                                          "your password?\n"))
                 time.sleep(0.5)
@@ -92,6 +97,7 @@ def pw_manipulation(password, save):
 
             # If letter in selection
             if "letter" in type_ask.lower():
+                # get the length of letters
                 let_leng_ask = int(input("how many letters do you want in " +
                                          "your password?\n"))
                 time.sleep(0.5)
@@ -119,6 +125,7 @@ def pw_manipulation(password, save):
 
             # If symbol in selection
             if "symbol" in type_ask.lower():
+                # get the length of symbols
                 sym_leng_ask = int(input("how many symbols do you want in " +
                                          "your password?\n"))
                 time.sleep(0.5)
