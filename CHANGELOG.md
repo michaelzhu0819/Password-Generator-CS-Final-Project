@@ -2,6 +2,14 @@ Date: Friday, 22nd Jan 2022
 
 Author: Michael Zhu
 
+Title: bug fix
+
+Description: Fixed a bug where in main.py the input key phrase section wouldn't run after typing continue
+
+Date: Friday, 22nd Jan 2022
+
+Author: Michael Zhu
+
 Title: better comments
 
 Description: Added better explanation to the variables in all files, along with the explanation of program in main.py
